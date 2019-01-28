@@ -27,8 +27,8 @@ The code has been build and uses Python 3.6.5, and the following Python packages
 * operator
 * argparse
 
-### Clone
-Clone this repo to your local machine using https://github.com/ffalfred/Recombination_Phasing
+### Clone or downlowad
+Clone or download this repo to your local machine using https://github.com/ffalfred/Recombination_Phasing
 
 ### Usage
 The file that have to be launched is the phasing_trio.py. There are two options/arguments required by the program:
