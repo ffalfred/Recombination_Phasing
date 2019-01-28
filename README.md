@@ -5,6 +5,7 @@ It is the pilot stage of the phasing algorithm for phasing  human oocytes from t
 ## Files contained
 * phasing_class.py: Class containing the algorithms
 * phasing_trio.py: File that uses the algorithms in "phasing_class.py" to produce the output
+* input_data_trios.txt:  File containing example data to run a test. Contains maternal genotype and genotypes of four trios from the same individual for chromosome 1. The data is tab-delimited. 
 
 ## Function
 
