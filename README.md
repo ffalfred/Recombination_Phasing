@@ -42,7 +42,7 @@ python phasing_trio.py -i input_data_trios.txt -m 20
 ```
 
 ## Author
-Alfred Ferrer Florensa
+Alfred Ferrer Florensa ; f.f.alfred@gmail.com 
 
 
 
