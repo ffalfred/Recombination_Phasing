@@ -31,8 +31,8 @@ Clone this repo to your local machine using https://github.com/ffalfred/Recombin
 
 ### Usage
 The file that have to be launched is the phasing_trio.py. There are two options/arguments required by the program:
-* i/--input : file containing the input data in format .txt tablimited.
-* m/--min_snps : Amount of SNPs required to define an haploblock
+* -i/--input : file containing the input data in format .txt tablimited.
+* -m/--min_snps : Amount of SNPs required to define an haploblock
 
 #### Example/test
 This is an example of the usage of the program with the example data, and requiring 20 consecutive SNPs to define an haploblock:
@@ -40,7 +40,7 @@ This is an example of the usage of the program with the example data, and requir
 python phasing_trio.py -i input_data_trios.txt -m 20
 ```
 
-##Author
+## Author
 Alfred Ferrer Florensa
 
 
