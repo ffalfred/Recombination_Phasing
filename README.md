@@ -20,6 +20,7 @@ Simple BED file per cell with chr, start coordinate, end coordinate and the phas
 ### Prerequisits
 The code has been build and uses Python 3.6.5, and the following Python packages:
 * math
+* os
 * numpy
 * pandas
 * matplotlib
