@@ -1,3 +1,4 @@
+import os
 import math
 import numpy as np
 import pandas as pd
@@ -8,13 +9,14 @@ pd.options.mode.chained_assignment = None
 
 class phasing_class_tool:
 
-    def __init__(self,SNPSfile,min_SNPS):
+    def __init__(self,SNPSfile,min_SNPS,output_dir):
         
         """Instants of the files. Include the input file and the number of consecutive 
         SNPs required to define an haploblock"""
         
         self.inputfile = pd.read_csv(SNPSfile,sep='\t')   # Input file in .txt format
         self.min_snps = min_SNPS    # Minimum of SNPs
+        self.output_dir = str(output_dir)
 
     def limit_snps(self,array_,pos_array):
         
@@ -189,10 +191,14 @@ class phasing_class_tool:
 
     def save_bed(self, dict, i):
         """ Function for saving the data in simple BED file per cell with chr, start coordinate, end coordinate and the phase"""
+        if os.path.exists(str(self.output_dir)):
+            pass
+        else:
+            os.makedirs(str(self.output_dir))
         for d in dict:
             dict[d]['Chr']= 'chr' + dict[d]['Chr'].astype(str)
             saving_file=pd.concat([dict[d]['Chr'], dict[d]['Start'],dict[d]['End'],dict[d]['Haplotype']], axis=1, keys=['Chr', 'Start','End','Haplotype'])
-            saving_file.to_csv('./Trio'+str(i)+'Cell'+str(d)+'.bed',index=False,header=False,sep='\t')
+            saving_file.to_csv(str(self.output_dir)+'/Trio'+str(i)+'Cell'+str(d)+'.bed',index=False,header=False,sep='\t')
 
     def phasing(self):
         """Main function for phasing. Select only informative maternal SNPs. Choose egg in the first trio as reference.
