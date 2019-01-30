@@ -8,12 +8,12 @@ pd.options.mode.chained_assignment = None
 
 class phasing_class_tool:
 
-    def __init__(self,BEDfile,min_SNPS):
+    def __init__(self,SNPSfile,min_SNPS):
         
         """Instants of the files. Include the input file and the number of consecutive 
         SNPs required to define an haploblock"""
         
-        self.inputfile = pd.read_csv(BEDfile,sep='\t')   # Input file in .txt format
+        self.inputfile = pd.read_csv(SNPSfile,sep='\t')   # Input file in .txt format
         self.min_snps = min_SNPS    # Minimum of SNPs
 
     def limit_snps(self,array_,pos_array):
