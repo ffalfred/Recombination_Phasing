@@ -34,11 +34,12 @@ Clone or download this repo to your local machine using https://github.com/ffalf
 The file that have to be launched is the phasing_trio.py. There are two options/arguments required by the program:
 * -i/--input : file containing the input data in format .txt tablimited.
 * -m/--min_snps : Amount of SNPs required to define an haploblock
+* -o/--output_dir : directory where to save the results
 
 #### Example/test
 This is an example of the usage of the program with the example data, and requiring 20 consecutive SNPs to define an haploblock:
 ```
-python phasing_trio.py -i input_data_trios.txt -m 20
+python phasing_trio.py -i input_data_trios.txt -m 20 -o ./results
 ```
 
 ## Author
